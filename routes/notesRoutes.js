@@ -8,10 +8,10 @@ import {
   updateNote,
 } from "../Controller/notes.js";
 const notesRoutes = express.Router();
-notesRoutes.get("/allData", getAllNotes);
-notesRoutes.get("/data/:id", getNote);
-notesRoutes.get("/searchedData/:title", searchedNote);
-notesRoutes.post("/create", toCreate);
-notesRoutes.delete("/deleteData/:id", deleteNote);
-notesRoutes.patch("/updateNote/:id", updateNote);
+notesRoutes.get("/", getAllNotes);
+notesRoutes.get("/:id", getNote);
+notesRoutes.get("/result/:title", searchedNote);
+notesRoutes.post("/", toCreate);
+notesRoutes.delete("/:id", deleteNote);
+notesRoutes.patch("/:id", updateNote);
 export default notesRoutes;
